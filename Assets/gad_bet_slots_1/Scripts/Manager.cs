@@ -27,14 +27,9 @@ public class Manager : MonoBehaviour
 
     [SerializeField] Text betText;
     [SerializeField] Text totalBetWin;
-    [SerializeField] Text winText;
 
     [Space(10)]
     [SerializeField] GameObject statusAtoSpinGO;
-
-    [Space(10)]
-    [SerializeField] Transform winlineParent;
-    [SerializeField] GameObject[] winLinePrefabs;
 
     GameInfo gameInfo;
     RollInfo rollInfo;
@@ -90,7 +85,6 @@ public class Manager : MonoBehaviour
             result = GetReelData()
         };
 
-        winText.text = $"{0}";
         SlotMachine.Instance.Pull(rollInfo.result);
     }
 
@@ -142,21 +136,6 @@ public class Manager : MonoBehaviour
         }
 
         return _iconNames;
-    }
-
-    GameObject GetWinLineById(int id) => id switch
-    {
-        1 => winLinePrefabs[0],
-        2 => winLinePrefabs[1],
-        3 => winLinePrefabs[2]
-    };
-
-    public void CalculatePrize()
-    {
-        foreach (int i in rollInfo.winlines)
-        {
-            Instantiate(GetWinLineById(i), winlineParent);
-        }
     }
 
     public void SetAutoSpin()
