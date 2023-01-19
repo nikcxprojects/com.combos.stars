@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject menu;
     [SerializeField] GameObject game1;
     [SerializeField] GameObject game2;
+    [SerializeField] GameObject settings;
 
     [SerializeField] GameObject backBtnGo;
 
@@ -25,6 +26,11 @@ public class UIManager : MonoBehaviour
 
         _last.SetActive(true);
         backBtnGo.SetActive(true);
+    }
+
+    public void OpenSettings(bool IsOpen)
+    {
+        settings.SetActive(IsOpen);
     }
 
     public void Back()
