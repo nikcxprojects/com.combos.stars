@@ -10,6 +10,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject game2;
     [SerializeField] GameObject settings;
 
+    [Space(10)]
+    [SerializeField] GameObject mark;
+    [SerializeField] AudioSource loop;
+
+    [Space(10)]
     [SerializeField] GameObject backBtnGo;
 
     public void OpenGame(int id)
@@ -42,6 +47,26 @@ public class UIManager : MonoBehaviour
 
         menu.SetActive(true);
         backBtnGo.SetActive(false);
+    }
+
+    public void SetOption(Transform option)
+    {
+        mark.transform.position = option.position;
+
+        if(string.Equals(option.name, "all on"))
+        {
+            loop.mute = false;
+            AudioListener.pause = false;
+        }
+        else if (string.Equals(option.name, "mute"))
+        {
+            AudioListener.pause = true;
+        }
+        else if (string.Equals(option.name, "music only"))
+        {
+            loop.mute = false;
+            AudioListener.pause = false;
+        }
     }
 
     public void BackStatus(bool enable)
