@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class Balance : MonoBehaviour
 {
+    Text textComponent;
     private const string key = "balance";
 
     private int Count
@@ -13,19 +14,33 @@ public class Balance : MonoBehaviour
 
     private void Awake()
     {
-        Text textComponent = GetComponent<Text>();
-        WheelSpinner.OnEndRolling += (value) =>
-        {
-            Count += value;
-            textComponent.text = $"{Count}";
-        };
+        textComponent = GetComponent<Text>();
+        textComponent.text = $"{Count}";
+    }
 
-        Manager.OnEndRolling += (value) =>
-        {
-            Count += value;
-            textComponent.text = $"{Count}";
-        };
+    private void OnEnable()
+    {
+        Manager.OnEndRolling += BalanceHandlerSlots;
+        WheelSpinner.OnEndRolling += BalanceHandlerWheel;
 
+        textComponent.text = $"{Count}";
+    }
+
+    private void OnDisable()
+    {
+        Manager.OnEndRolling -= BalanceHandlerSlots;
+        WheelSpinner.OnEndRolling -= BalanceHandlerWheel;
+    }
+
+    private void BalanceHandlerSlots(int value)
+    {
+        Count += value;
+        textComponent.text = $"{Count}";
+    }
+
+    private void BalanceHandlerWheel(int value)
+    {
+        Count += value;
         textComponent.text = $"{Count}";
     }
 }

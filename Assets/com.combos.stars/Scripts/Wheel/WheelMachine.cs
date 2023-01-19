@@ -11,8 +11,8 @@ public class WheelMachine : MonoBehaviour
     public static Action<float> OnHandlePulled { get; set; }
     public static Func<float, int> OnWheelStopped { get; set; }
 
-    public static float[] angles = new float[] { 360, 29.272f, 57.977f, 90.971f, 120.396f, 151.98f, 179.556f, 208.713f, 239.401f, 270.214f, 302.721f, 331.867f };
-    public static int[] prizes = new int[] { 25, 30, 40, 10, 15, 45, 5, 50, 85, 55, 65, 75 };
+    public static float[] angles = new float[] { 344.481f, 315.046f, 285.25f, 254.266f, 225.494f, 195.077f, 165.446f, 135.007f, 104.726f, 75.062f, 45.399f, 16.017f };
+    public static int[] prizes = new int[] { 50, 20, 10, 100, 50, 20, 10, 100, 50, 20, 10, 100 };
 
     private void Awake()
     {
