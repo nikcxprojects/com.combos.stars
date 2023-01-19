@@ -36,11 +36,15 @@ public class Balance : MonoBehaviour
     {
         Count += value;
         textComponent.text = $"{Count}";
+
+        Instantiate(Resources.Load<GameObject>("popup"), GameObject.Find("main canvas").transform);
     }
 
     private void BalanceHandlerWheel(int value)
     {
         Count += value;
         textComponent.text = $"{Count}";
+
+        Instantiate(Resources.Load<GameObject>("popup"), GameObject.Find("main canvas").transform);
     }
 }

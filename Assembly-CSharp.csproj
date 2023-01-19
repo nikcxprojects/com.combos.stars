@@ -71,6 +71,7 @@
     <Compile Include="Assets\com.combos.stars\Scripts\Managers\UIManager.cs" />
     <Compile Include="Assets\com.combos.stars\Scripts\Line.cs" />
     <Compile Include="Assets\com.combos.stars\Scripts\Wheel\WheelMachine.cs" />
+    <Compile Include="Assets\com.combos.stars\Scripts\Popup.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
