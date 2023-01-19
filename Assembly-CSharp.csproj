@@ -63,7 +63,6 @@
     <Compile Include="Assets\com.combos.stars\Scripts\VibraOption.cs" />
     <Compile Include="Assets\com.combos.stars\Scripts\Record.cs" />
     <Compile Include="Assets\com.combos.stars\Scripts\Managers\SFXManager.cs" />
-    <Compile Include="Assets\com.combos.stars\Scripts\Landscape.cs" />
     <Compile Include="Assets\gad_bet_slots_1\Scripts\Row.cs" />
     <Compile Include="Assets\com.combos.stars\Scripts\Balance.cs" />
     <Compile Include="Assets\com.combos.stars\Scripts\Score.cs" />

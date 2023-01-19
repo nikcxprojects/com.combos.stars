@@ -9,8 +9,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject game1;
     [SerializeField] GameObject game2;
 
-    [Space(10)]
-    [SerializeField] GameObject diceGo;
     [SerializeField] GameObject backBtnGo;
 
     public void OpenGame(int id)
@@ -26,8 +24,6 @@ public class UIManager : MonoBehaviour
         }
 
         _last.SetActive(true);
-
-        diceGo.SetActive(false);
         backBtnGo.SetActive(true);
     }
 
@@ -39,8 +35,6 @@ public class UIManager : MonoBehaviour
         }
 
         menu.SetActive(true);
-
-        diceGo.SetActive(true);
         backBtnGo.SetActive(false);
     }
 
