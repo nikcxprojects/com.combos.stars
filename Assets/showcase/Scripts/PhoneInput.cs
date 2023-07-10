@@ -24,12 +24,13 @@ public class PhoneInput : MonoBehaviour
         if (cleanedNumber.Length >= 11)
         {
             // Добавить префикс "+" и код страны "7"
-            cleanedNumber = $"+{cleanedNumber.Substring(0, 1)} {cleanedNumber.Substring(1, 3)} ";
+            var cleanedNumberFirst = $"+{cleanedNumber.Substring(0, 1)} {cleanedNumber.Substring(1, 3)} ";
 
             // Добавить остальную часть номера телефона
             if (cleanedNumber.Length >= 9)
             {
-                cleanedNumber += $"{cleanedNumber.Substring(5, 3)}-{cleanedNumber.Substring(8)}";
+                //89996394765
+                cleanedNumber = cleanedNumberFirst + $"{cleanedNumber.Substring(4, 3)}-{cleanedNumber.Substring(7,2)}-{cleanedNumber.Substring(9)}";
             }
 
             InputField.text = cleanedNumber;
