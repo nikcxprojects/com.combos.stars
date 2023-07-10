@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/788 El Royale/Scenes/game.unity
+    path: Assets/com.combos.stars/Scenes/game.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/showcase/Scenes/showcase.unity
+    guid: dc13975ea3305cb41a015bedaae99ff4
   m_configObjects: {}

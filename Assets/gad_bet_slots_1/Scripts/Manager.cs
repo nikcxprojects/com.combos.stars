@@ -39,6 +39,8 @@ public class Manager : MonoBehaviour
 
     private void Start()
     {
+        Screen.orientation = ScreenOrientation.Landscape;
+
         gameInfo = new GameInfo
         {
             balance = 1000, bids = new int[] { 10, 25, 50, 100}
