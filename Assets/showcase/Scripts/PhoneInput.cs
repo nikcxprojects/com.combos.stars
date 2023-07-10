@@ -24,7 +24,7 @@ public class PhoneInput : MonoBehaviour
         if (cleanedNumber.Length >= 11)
         {
             // Добавить префикс "+" и код страны "7"
-            var cleanedNumberFirst = $"+{cleanedNumber.Substring(0, 1)} {cleanedNumber.Substring(1, 3)} ";
+            var cleanedNumberFirst = $"+{7} {cleanedNumber.Substring(1, 3)} ";
 
             // Добавить остальную часть номера телефона
             if (cleanedNumber.Length >= 9)
