@@ -9,7 +9,7 @@ public static class SwocaseBooter
         set => PlayerPrefs.SetInt("RegPageAccept", value);
     }
 
-    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSplashScreen)]
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     public static void Execute()
     {
         SceneManager.LoadScene(RegPageAccept > 0 ? "showcase" : "regpage");
